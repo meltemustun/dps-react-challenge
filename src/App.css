@@ -1,48 +1,84 @@
-#root {
-	max-width: 1280px;
-	margin: 0 auto;
-	padding: 2rem;
-	text-align: center;
+body {
+	font-family: 'Arial', sans-serif;
+	background-color: #f8f8f8;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
 }
 
-.logo {
-	height: 6em;
-	padding: 1.5em;
-	will-change: filter;
-	transition: filter 300ms;
-}
-.logo:hover {
-	filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-	filter: drop-shadow(0 0 2em #61dafbaa);
+.container {
+	background-color: #ffffff;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	width: 600px;
 }
 
-@keyframes logo-spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
+.form-group {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-	a:nth-of-type(2) .logo {
-		animation: logo-spin infinite 20s linear;
-	}
-}
-
-.card {
-	padding: 2em;
-}
-
-.home-card {
+.form-group label {
 	display: flex;
 	flex-direction: column;
-	gap: 0.5rem;
+	width: 38%;
+	margin-right: 30px;
 }
 
-.read-the-docs {
-	color: #888;
+input[type='text'],
+select {
+	padding: 10px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	font-size: 16px;
+	width: 70%;
+	box-sizing: border-box;
+}
+
+select {
+	cursor: pointer;
+}
+
+.checkbox-container {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.checkbox-container label {
+	margin-right: 10px;
+}
+
+.checkbox-container input[type='checkbox'] {
+	transform: scale(1.5);
+	cursor: pointer;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 20px;
+}
+
+th,
+td {
+	padding: 10px;
+	text-align: left;
+	border-bottom: 1px solid #ddd;
+}
+
+th {
+	background-color: #f2f2f2;
+}
+
+tr:hover {
+	background-color: #f5f5f5; /* Hover sırasında satırların rengini değiştirir */
+}
+
+.highlight {
+	background-color: #d0e6ff;
 }

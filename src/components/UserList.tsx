@@ -1,17 +1,24 @@
 import React from 'react';
 
-export default function UserList({ users }) {
+export default function UserList({ users, oldestUsers, highlightOldest }) {
 	return (
-		<div>
+		<>
 			<table>
 				<tr>
 					<th>Name</th>
 					<th>City</th>
 					<th>Birthday</th>
 				</tr>
-				{users.map((item) => {
+				{users.map((item: any) => {
 					return (
-						<tr>
+						<tr
+							className={
+								highlightOldest &&
+								oldestUsers.get(item.city) === item.id
+									? 'highlight'
+									: ''
+							}
+						>
 							<td>
 								{item.firstName} {item.lastName}
 							</td>
@@ -21,6 +28,6 @@ export default function UserList({ users }) {
 					);
 				})}
 			</table>
-		</div>
+		</>
 	);
 }
